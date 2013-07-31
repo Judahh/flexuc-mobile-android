@@ -1,13 +1,18 @@
 package g4flex.android.flexucmobile;
 
 import android.os.Bundle;
+import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.view.Menu;
 
 public class MainActivity extends Activity {
 
+	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		ActionBar actionBar = getActionBar();
+		actionBar.hide();
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 	}
